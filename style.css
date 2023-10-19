@@ -124,7 +124,7 @@ a:active {
   box-shadow: 0 0 12px rgba(0 0 0 / 0.08);
   width: 500px;
   color: white;
-  animation: modalopen 1.5s;
+  animation: modalopen 1s;
   border-radius: var(--border-radius);
   overflow: hidden;
 }
@@ -166,7 +166,7 @@ h3 {
   width: 100%;
 }
 
-.bookmark-form {
+#bookmark-form {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -186,6 +186,10 @@ h3 {
   width: 300px;
 }
 
+.form-input:focus {
+  outline: none;
+}
+
 #modal-button {
   background-color: var(--color2);
   color: white;
@@ -195,9 +199,21 @@ h3 {
   margin-top: 24px;
   font-size: 1.25rem;
   font-weight: bold;
+  cursor: pointer;
 }
+
+#modal-button:hover {
+  background-color: var(--color1);
+}
+
 /* Media query */
 @media screen and (max-width: 600px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
   .add-modal {
     width: 90%;
     padding: 16px 0;
@@ -223,5 +239,9 @@ h3 {
   .name {
     margin: 0 24px;
     justify-content: space-between;
+  }
+
+  .modal {
+    width: 90%;
   }
 }
