@@ -81,6 +81,9 @@ function buildBookmarks() {
 
 // create bookmark from localStorage
 function fetchBookmarks() {
+  if (localStorage.getItem("bookmarks") === "[]") {
+    localStorage.removeItem("bookmarks");
+  }
   //   get bookmars fromlocalstorage if available
   if (localStorage.getItem("bookmarks")) {
     bookmarksLocalStorage = JSON.parse(localStorage.getItem("bookmarks"));
@@ -88,7 +91,7 @@ function fetchBookmarks() {
     // creating a fake initial bookmark to show something the first time when don´t have bookmarks yet
     bookmarksLocalStorage = [
       {
-        name: "Google",
+        name: "Google (example)",
         url: "https://google.com",
       },
     ];
