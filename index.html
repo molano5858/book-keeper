@@ -5,13 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Book Keeper</title>
     <link rel="icon" type="image/png" href="favicon.png" />
-    <link
+    <!-- <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
+    /> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- Modal -->
+    <div class="show-modal">
+      <h1>Add Bookmark</h1>
+      <i class="fas fa-plus"></i>
+    </div>
+
+    <!-- Bookmarks -->
+    <div class="container" id="bookmark-container">
+      <div class="item">
+        <div class="name">
+          <img src="./favicon.png" alt="favicon" />
+          <a href="https://www.google.com/" target="_blank">Google</a>
+          <i class="fas fa-times delete-bookmark" title="Delete Bookmark"></i>
+        </div>
+      </div>
+      <div class="item">
+        <div class="name">
+          <img src="./favicon.png" alt="favicon" />
+          <a href="https://www.google.com/" target="_blank">Google</a>
+          <i class="fas fa-times delete-bookmark" title="Delete Bookmark"></i>
+        </div>
+      </div>
+      <div class="item">
+        <div class="name">
+          <img src="./favicon.png" alt="favicon" />
+          <a href="https://www.google.com/" target="_blank">Google</a>
+          <i class="fas fa-times delete-bookmark" title="Delete Bookmark"></i>
+        </div>
+      </div>
+    </div>
+
     <!-- Script -->
     <script src="script.js"></script>
   </body>
