@@ -124,13 +124,12 @@ a:active {
   box-shadow: 0 0 12px rgba(0 0 0 / 0.08);
   width: 500px;
   color: white;
-  padding: 16px;
   animation: modalopen 1.5s;
   border-radius: var(--border-radius);
+  overflow: hidden;
 }
 
 .close-modal {
-  float: right;
   cursor: pointer;
 }
 
@@ -144,9 +143,12 @@ a:active {
 }
 
 .modal-header {
-  background-color: var(--color4);
+  background-color: var(--color2);
   color: white;
   padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 h3 {
@@ -158,9 +160,45 @@ h3 {
   background-color: whitesmoke;
 }
 
+.form-group {
+  margin: 16px auto;
+  color: black;
+  width: 100%;
+}
+
+.bookmark-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-group {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.form-input {
+  border: none;
+  border-bottom: 2px solid #01949a;
+  background: none;
+  width: 300px;
+}
+
+#modal-button {
+  background-color: var(--color2);
+  color: white;
+  padding: 16px 24px;
+  border: none;
+  border-radius: var(--border-radius);
+  margin-top: 24px;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
 /* Media query */
 @media screen and (max-width: 600px) {
-  .show-modal {
+  .add-modal {
     width: 90%;
     padding: 16px 0;
     margin: 0 0;
